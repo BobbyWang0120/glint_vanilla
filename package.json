@@ -2,12 +2,10 @@
   "name": "glint_vanilla",
   "version": "1.0.0",
   "description": "企业招聘人才求职网页应用",
-  "main": "server/index.js",
+  "main": "server/server.js",
   "scripts": {
-    "start": "node server/index.js",
-    "dev:frontend": "live-server public --port=3000 --entry-file=pages/index.html",
-    "dev:backend": "nodemon server/index.js",
-    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
