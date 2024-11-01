@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Glint</title>
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/styles/register.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Glint</a>
+            <ul class="nav-links">
+                <li><a href="/jobs">Find Jobs</a></li>
+                <li><a href="/talent">Find Talent</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="btn btn-login">Login</button>
+                <button class="btn btn-register">Register</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容区 -->
+    <main class="main-content">
+        <div class="register-container">
+            <h1>Create Your Account</h1>
+            <p class="subtitle">Join Glint to connect with opportunities</p>
+
+            <!-- 注册表单 -->
+            <form class="register-form" id="registerForm">
+                <!-- 用户类型选择 -->
+                <div class="user-type-selector">
+                    <h2>I am a...</h2>
+                    <div class="type-options">
+                        <label class="type-option">
+                            <input type="radio" name="userType" value="jobseeker" checked>
+                            <div class="option-content">
+                                <span class="option-title">Job Seeker</span>
+                                <span class="option-desc">Looking for job opportunities</span>
+                            </div>
+                        </label>
+                        <label class="type-option">
+                            <input type="radio" name="userType" value="employer">
+                            <div class="option-content">
+                                <span class="option-title">Employer</span>
+                                <span class="option-desc">Looking to hire talent</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 基本信息 -->
+                <div class="form-section">
+                    <h2>Basic Information</h2>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+                </div>
+
+                <!-- 提交按钮 -->
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-register">Create Account</button>
+                    <p class="login-link">
+                        Already have an account? <a href="/login">Log in</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2024 Glint. All rights reserved.</p>
+            <p>Connecting talent with opportunities</p>
+        </div>
+    </footer>
+
+    <script type="module" src="/scripts/utils/api.js"></script>
+</body>
+</html>
