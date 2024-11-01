@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glint - Connect with Opportunities</title>
     <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- 导航栏 -->
@@ -14,6 +16,8 @@
             <ul class="nav-links">
                 <li><a href="/jobs">Find Jobs</a></li>
                 <li><a href="/talent">Find Talent</a></li>
+                <li><a href="/companies">Companies</a></li>
+                <li><a href="/resources">Resources</a></li>
             </ul>
             <div class="auth-buttons">
                 <button class="btn btn-login">Login</button>
@@ -24,41 +28,210 @@
 
     <!-- 主要内容区 -->
     <main class="main-content">
-        <!-- 搜索区域 -->
-        <section class="search-section">
-            <h1>Find Your Dream Job</h1>
-            <div class="search-box">
-                <input 
-                    type="text" 
-                    class="search-input" 
-                    placeholder="Search for jobs, companies, or keywords..."
-                >
-                <button class="search-button">Search</button>
+        <!-- 英雄区域 -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Your Career Journey Starts Here</h1>
+                <p class="hero-subtitle">Connect with over 1 million opportunities from top companies worldwide</p>
+                <div class="search-box">
+                    <div class="search-input-group">
+                        <i class="fas fa-search"></i>
+                        <input type="text" class="search-input" placeholder="Job title, skills, or company">
+                    </div>
+                    <div class="search-input-group">
+                        <i class="fas fa-location-dot"></i>
+                        <input type="text" class="search-input" placeholder="City or remote">
+                    </div>
+                    <button class="search-button">Search Jobs</button>
+                </div>
+                <div class="popular-searches">
+                    Popular: <a href="#">Software Engineer</a> • <a href="#">Product Manager</a> • <a href="#">Data Scientist</a> • <a href="#">Remote Jobs</a>
+                </div>
             </div>
         </section>
 
-        <!-- 职位列表区域 -->
-        <section class="jobs-section">
-            <h2>Featured Jobs</h2>
+        <!-- 平台统计 -->
+        <section class="stats-section">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">1M+</div>
+                    <div class="stat-label">Active Jobs</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500K+</div>
+                    <div class="stat-label">Companies</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2M+</div>
+                    <div class="stat-label">Job Seekers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 职位类别 -->
+        <section class="categories-section">
+            <div class="section-header">
+                <h2>Explore Job Categories</h2>
+                <p>Find opportunities in your field of expertise</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Technology</h3>
+                    <p>15,234 jobs</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Business</h3>
+                    <p>12,456 jobs</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>Design</h3>
+                    <p>8,765 jobs</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Marketing</h3>
+                    <p>9,876 jobs</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-flask"></i>
+                    <h3>Science</h3>
+                    <p>6,543 jobs</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Management</h3>
+                    <p>7,890 jobs</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 特色职位 -->
+        <section class="featured-jobs-section">
+            <div class="section-header">
+                <h2>Featured Jobs</h2>
+                <p>Handpicked opportunities from top companies</p>
+            </div>
             <div class="jobs-grid">
-                <!-- 示例职位卡片 -->
                 <div class="job-card">
-                    <h3>Senior Software Engineer</h3>
-                    <p>TechCorp Inc.</p>
-                    <p>San Francisco, CA</p>
-                    <p>$120k - $180k</p>
+                    <div class="job-card-header">
+                        <img src="https://logo.clearbit.com/google.com" alt="Google" class="company-logo">
+                        <div class="job-card-company">
+                            <h4>Senior Software Engineer</h4>
+                            <p>Google</p>
+                        </div>
+                    </div>
+                    <div class="job-card-body">
+                        <div class="job-tag">Full-time</div>
+                        <div class="job-tag">Remote</div>
+                        <p class="job-location"><i class="fas fa-location-dot"></i> San Francisco, CA</p>
+                        <p class="job-salary"><i class="fas fa-money-bill"></i> $150K - $200K</p>
+                    </div>
                 </div>
                 <div class="job-card">
-                    <h3>Product Manager</h3>
-                    <p>Innovation Labs</p>
-                    <p>New York, NY</p>
-                    <p>$100k - $150k</p>
+                    <div class="job-card-header">
+                        <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" class="company-logo">
+                        <div class="job-card-company">
+                            <h4>Product Manager</h4>
+                            <p>Microsoft</p>
+                        </div>
+                    </div>
+                    <div class="job-card-body">
+                        <div class="job-tag">Full-time</div>
+                        <div class="job-tag">Hybrid</div>
+                        <p class="job-location"><i class="fas fa-location-dot"></i> Seattle, WA</p>
+                        <p class="job-salary"><i class="fas fa-money-bill"></i> $130K - $180K</p>
+                    </div>
                 </div>
                 <div class="job-card">
-                    <h3>UX Designer</h3>
-                    <p>Creative Solutions</p>
-                    <p>London, UK</p>
-                    <p>£50k - £75k</p>
+                    <div class="job-card-header">
+                        <img src="https://logo.clearbit.com/apple.com" alt="Apple" class="company-logo">
+                        <div class="job-card-company">
+                            <h4>UI/UX Designer</h4>
+                            <p>Apple</p>
+                        </div>
+                    </div>
+                    <div class="job-card-body">
+                        <div class="job-tag">Full-time</div>
+                        <div class="job-tag">On-site</div>
+                        <p class="job-location"><i class="fas fa-location-dot"></i> Cupertino, CA</p>
+                        <p class="job-salary"><i class="fas fa-money-bill"></i> $120K - $160K</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <a href="/jobs" class="btn btn-outline">View All Jobs</a>
+            </div>
+        </section>
+
+        <!-- 平台优势 -->
+        <section class="features-section">
+            <div class="section-header">
+                <h2>Why Choose Glint</h2>
+                <p>Empowering careers, connecting talents</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Smart Matching</h3>
+                    <p>AI-powered job matching technology that connects you with the most relevant opportunities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Verified Companies</h3>
+                    <p>All companies are thoroughly vetted to ensure a safe and reliable job search experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Career Insights</h3>
+                    <p>Access detailed salary data and career growth opportunities in your industry.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated support team is always here to help you with your job search journey.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 合作企业 -->
+        <section class="companies-section">
+            <div class="section-header">
+                <h2>Trusted by Leading Companies</h2>
+                <p>Join thousands of companies hiring on Glint</p>
+            </div>
+            <div class="companies-grid">
+                <img src="https://logo.clearbit.com/google.com" alt="Google">
+                <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft">
+                <img src="https://logo.clearbit.com/apple.com" alt="Apple">
+                <img src="https://logo.clearbit.com/amazon.com" alt="Amazon">
+                <img src="https://logo.clearbit.com/meta.com" alt="Meta">
+                <img src="https://logo.clearbit.com/netflix.com" alt="Netflix">
+            </div>
+        </section>
+
+        <!-- 注册引导 -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Ready to Take the Next Step?</h2>
+                <p>Join millions of people who've found their dream job through Glint</p>
+                <div class="cta-buttons">
+                    <a href="/register" class="btn btn-primary">Create Account</a>
+                    <a href="/jobs" class="btn btn-outline">Browse Jobs</a>
                 </div>
             </div>
         </section>
@@ -67,11 +240,61 @@
     <!-- 页脚 -->
     <footer class="footer">
         <div class="footer-content">
-            <p>© 2024 Glint. All rights reserved.</p>
-            <p>Connecting talent with opportunities</p>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>For Job Seekers</h3>
+                    <ul>
+                        <li><a href="#">Browse Jobs</a></li>
+                        <li><a href="#">Career Resources</a></li>
+                        <li><a href="#">Salary Calculator</a></li>
+                        <li><a href="#">Resume Builder</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>For Employers</h3>
+                    <ul>
+                        <li><a href="#">Post a Job</a></li>
+                        <li><a href="#">Talent Solutions</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="app-links">
+                        <a href="#" class="app-store-badge">
+                            <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-example-preferred.png" alt="App Store">
+                        </a>
+                        <a href="#" class="play-store-badge">
+                            <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Google Play">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Glint. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
         </div>
     </footer>
-
-    <script type="module" src="/scripts/utils/api.js"></script>
 </body>
 </html>
