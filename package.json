@@ -1,0 +1,16 @@
+{
+  "name": "glint_vanilla",
+  "version": "1.0.0",
+  "description": "企业招聘人才求职网页应用",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server public --port=3000 --entry-file=pages/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
