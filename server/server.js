@@ -4,6 +4,7 @@
 const http = require('http');
 const path = require('path');
 const handleStatic = require('./handlers/static');
+const { handleRegister } = require('./handlers/auth');
 const { sendError } = require('./utils/response');
 const { initDatabase } = require('./db/connect');
 
@@ -21,11 +22,32 @@ const PUBLIC_DIR = path.join(__dirname, '..', 'public');
     }
 })();
 
+/**
+ * 路由处理
+ * @param {Object} req - HTTP请求对象
+ * @param {Object} res - HTTP响应对象
+ */
+const handleRoutes = async (req, res) => {
+    const { method, url } = req;
+
+    // API路由
+    if (url === '/api/register' && method === 'POST') {
+        return handleRegister(req, res);
+    }
+
+    // 静态文件路由
+    if (method === 'GET') {
+        return handleStatic(req, res, PUBLIC_DIR);
+    }
+
+    // 404处理
+    sendError(res, 404, 'Not Found');
+};
+
 // 创建HTTP服务器
 const server = http.createServer(async (req, res) => {
     try {
-        // 处理静态文件请求
-        await handleStatic(req, res, PUBLIC_DIR);
+        await handleRoutes(req, res);
     } catch (error) {
         console.error('Server Error:', error);
         sendError(res, 500, 'Internal Server Error');
