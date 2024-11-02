@@ -9,22 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="/" class="logo">Glint</a>
-            <ul class="nav-links">
-                <li><a href="/jobs">Find Jobs</a></li>
-                <li><a href="/talent">Find Talent</a></li>
-                <li><a href="/companies">Companies</a></li>
-                <li><a href="/resources">Resources</a></li>
-            </ul>
-            <div class="auth-buttons">
-                <button class="btn btn-login">Login</button>
-                <button class="btn btn-register">Register</button>
-            </div>
-        </div>
-    </nav>
+    <!-- 页头 -->
+    <header></header>
 
     <!-- 主要内容区 -->
     <main class="main-content">
@@ -238,63 +224,11 @@
     </main>
 
     <!-- 页脚 -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3>For Job Seekers</h3>
-                    <ul>
-                        <li><a href="#">Browse Jobs</a></li>
-                        <li><a href="#">Career Resources</a></li>
-                        <li><a href="#">Salary Calculator</a></li>
-                        <li><a href="#">Resume Builder</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>For Employers</h3>
-                    <ul>
-                        <li><a href="#">Post a Job</a></li>
-                        <li><a href="#">Talent Solutions</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Resources</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Company</h3>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Press</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Connect</h3>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                    <div class="app-links">
-                        <a href="#" class="app-store-badge">
-                            <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-example-preferred.png" alt="App Store">
-                        </a>
-                        <a href="#" class="play-store-badge">
-                            <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Google Play">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2024 Glint. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Cookie Policy</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <footer></footer>
+
+    <script type="module">
+        import { initComponents } from '/scripts/utils/components.js';
+        document.addEventListener('DOMContentLoaded', initComponents);
+    </script>
 </body>
 </html>

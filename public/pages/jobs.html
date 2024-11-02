@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs - Glint</title>
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/styles/jobs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 页头 -->
+    <header></header>
+
+    <!-- 主要内容区 -->
+    <main class="main-content">
+        <!-- 搜索区域 -->
+        <section class="search-section">
+            <div class="search-box">
+                <div class="search-input-group">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="search-input" placeholder="Job title, skills, or company" value="Software Engineer">
+                </div>
+                <div class="search-input-group">
+                    <i class="fas fa-location-dot"></i>
+                    <input type="text" class="search-input" placeholder="City or remote" value="San Francisco">
+                </div>
+                <button class="search-button">Search</button>
+            </div>
+        </section>
+
+        <!-- 筛选和结果区域 -->
+        <div class="jobs-container">
+            <!-- 筛选侧边栏 -->
+            <aside class="filters-sidebar">
+                <div class="filter-group">
+                    <h3>Experience Level</h3>
+                    <label class="filter-option">
+                        <input type="checkbox" checked> Entry Level
+                        <span class="count">(234)</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" checked> Mid Level
+                        <span class="count">(567)</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox"> Senior Level
+                        <span class="count">(789)</span>
+                    </label>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Job Type</h3>
+                    <label class="filter-option">
+                        <input type="checkbox" checked> Full-time
+                        <span class="count">(1,234)</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox"> Part-time
+                        <span class="count">(567)</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox"> Contract
+                        <span class="count">(345)</span>
+                    </label>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Location Type</h3>
+                    <label class="filter-option">
+                        <input type="checkbox" checked> Remote
+                        <span class="count">(789)</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox"> On-site
+                        <span class="count">(456)</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox"> Hybrid
+                        <span class="count">(234)</span>
+                    </label>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Salary Range</h3>
+                    <label class="filter-option">
+                        <input type="checkbox"> $0 - $50k
+                        <span class="count">(123)</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" checked> $50k - $100k
+                        <span class="count">(456)</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" checked> $100k - $150k
+                        <span class="count">(789)</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox"> $150k+
+                        <span class="count">(234)</span>
+                    </label>
+                </div>
+            </aside>
+
+            <!-- 职位列表 -->
+            <div class="jobs-list">
+                <div class="jobs-header">
+                    <h2>2,345 Software Engineer jobs in San Francisco</h2>
+                    <div class="jobs-sort">
+                        <span>Sort by:</span>
+                        <select>
+                            <option>Most Relevant</option>
+                            <option>Newest</option>
+                            <option>Highest Salary</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 职位卡片 -->
+                <a href="/pages/job-detail.html" class="job-card">
+                    <div class="job-card-header">
+                        <img src="https://logo.clearbit.com/google.com" alt="Google" class="company-logo">
+                        <div class="job-card-company">
+                            <h3>Senior Software Engineer</h3>
+                            <p>Google</p>
+                        </div>
+                        <div class="job-card-salary">$150K - $200K</div>
+                    </div>
+                    <div class="job-card-tags">
+                        <span class="tag">Full-time</span>
+                        <span class="tag">Remote</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">React</span>
+                    </div>
+                    <p class="job-card-description">
+                        Join our team to build next-generation cloud infrastructure and help scale Google's most critical services.
+                    </p>
+                    <div class="job-card-footer">
+                        <span><i class="fas fa-location-dot"></i> San Francisco, CA</span>
+                        <span><i class="fas fa-clock"></i> Posted 2 days ago</span>
+                    </div>
+                </a>
+
+                <a href="/pages/job-detail.html" class="job-card">
+                    <div class="job-card-header">
+                        <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" class="company-logo">
+                        <div class="job-card-company">
+                            <h3>Full Stack Engineer</h3>
+                            <p>Microsoft</p>
+                        </div>
+                        <div class="job-card-salary">$130K - $180K</div>
+                    </div>
+                    <div class="job-card-tags">
+                        <span class="tag">Full-time</span>
+                        <span class="tag">Hybrid</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Node.js</span>
+                    </div>
+                    <p class="job-card-description">
+                        Work on cutting-edge web applications and help shape the future of Microsoft's cloud services.
+                    </p>
+                    <div class="job-card-footer">
+                        <span><i class="fas fa-location-dot"></i> San Francisco, CA</span>
+                        <span><i class="fas fa-clock"></i> Posted 3 days ago</span>
+                    </div>
+                </a>
+
+                <a href="/pages/job-detail.html" class="job-card">
+                    <div class="job-card-header">
+                        <img src="https://logo.clearbit.com/apple.com" alt="Apple" class="company-logo">
+                        <div class="job-card-company">
+                            <h3>iOS Engineer</h3>
+                            <p>Apple</p>
+                        </div>
+                        <div class="job-card-salary">$140K - $190K</div>
+                    </div>
+                    <div class="job-card-tags">
+                        <span class="tag">Full-time</span>
+                        <span class="tag">On-site</span>
+                        <span class="tag">Swift</span>
+                        <span class="tag">iOS</span>
+                    </div>
+                    <p class="job-card-description">
+                        Create amazing experiences for millions of iOS users worldwide. Join our talented team of developers.
+                    </p>
+                    <div class="job-card-footer">
+                        <span><i class="fas fa-location-dot"></i> Cupertino, CA</span>
+                        <span><i class="fas fa-clock"></i> Posted 1 week ago</span>
+                    </div>
+                </a>
+
+                <!-- 分页 -->
+                <div class="pagination">
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn">4</button>
+                    <button class="page-btn">5</button>
+                    <span>...</span>
+                    <button class="page-btn">23</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer></footer>
+
+    <script type="module">
+        import { initComponents } from '/scripts/utils/components.js';
+        document.addEventListener('DOMContentLoaded', initComponents);
+    </script>
+</body>
+</html>
