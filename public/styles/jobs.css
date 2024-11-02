@@ -5,13 +5,80 @@
     background: white;
     padding: 2rem;
     border-bottom: 1px solid #e5e7eb;
+    margin-top: -1rem; /* 抵消body的padding-top */
+}
+
+.search-box {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    gap: 0;
+    background: white;
+    padding: 0.75rem;
+    border-radius: 100px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.search-input-group {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    position: relative;
+}
+
+.search-input-group:first-child {
+    border-right: 2px solid #e5e7eb;
+}
+
+.search-input-group i {
+    color: #64748b;
+    font-size: 1.25rem;
+    min-width: 24px;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    background: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    width: 100%;
+}
+
+.search-input::placeholder {
+    color: #94a3b8;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 0.5rem;
+}
+
+.search-button:hover {
+    background: var(--secondary-color);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* 主容器 */
 .jobs-container {
     max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 2rem;
+    margin: 2rem auto;
+    padding: 0 2rem;
     display: grid;
     grid-template-columns: 280px 1fr;
     gap: 2rem;
@@ -111,7 +178,6 @@
     transition: all 0.3s ease;
     text-decoration: none;
     color: inherit;
-    display: block;
 }
 
 .job-card:hover {
@@ -232,6 +298,29 @@
 }
 
 @media (max-width: 768px) {
+    .search-box {
+        flex-direction: column;
+        padding: 0.5rem;
+        border-radius: 16px;
+        gap: 0.5rem;
+    }
+
+    .search-input-group {
+        width: 100%;
+        border-radius: 100px;
+        background: #f8fafc;
+    }
+
+    .search-input-group:first-child {
+        border-right: none;
+        border-bottom: 2px solid #e5e7eb;
+    }
+
+    .search-button {
+        width: 100%;
+        margin-left: 0;
+    }
+
     .jobs-container {
         grid-template-columns: 1fr;
     }

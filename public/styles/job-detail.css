@@ -103,10 +103,11 @@
 /* 应用侧边栏 */
 .application-sidebar {
     position: sticky;
-    top: 2rem;
+    top: calc(var(--navbar-height) + 2rem);
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    height: fit-content;
 }
 
 .salary-range {
