@@ -4,220 +4,272 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glint - Connect with Opportunities</title>
-    <link rel="stylesheet" href="/styles/common.css">
-    <link rel="stylesheet" href="/styles/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                    },
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="pt-[72px]">
     <!-- 页头 -->
     <header></header>
 
     <!-- 主要内容区 -->
-    <main class="main-content">
+    <main>
         <!-- 英雄区域 -->
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1>Your Career Journey Starts Here</h1>
-                <p class="hero-subtitle">Connect with over 1 million opportunities from top companies worldwide</p>
-                <div class="search-box">
-                    <div class="search-input-group">
-                        <i class="fas fa-search"></i>
-                        <input type="text" class="search-input" placeholder="Job title, skills, or company">
+        <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24 px-4 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-5xl font-bold mb-6 leading-tight">Your Career Journey Starts Here</h1>
+                <p class="text-xl mb-10 opacity-90">Connect with over 1 million opportunities from top companies worldwide</p>
+                
+                <!-- 搜索框 -->
+                <div class="bg-white p-3 rounded-full shadow-lg mb-6">
+                    <div class="flex">
+                        <div class="flex-1 flex items-center px-6 border-r-2 border-gray-200">
+                            <i class="fas fa-search text-gray-500 text-xl min-w-[24px]"></i>
+                            <input type="text" class="flex-1 ml-4 text-lg text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="Job title, skills, or company">
+                        </div>
+                        <div class="flex-1 flex items-center px-6">
+                            <i class="fas fa-location-dot text-gray-500 text-xl min-w-[24px]"></i>
+                            <input type="text" class="flex-1 ml-4 text-lg text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="City or remote">
+                        </div>
+                        <button class="ml-2 px-10 py-4 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-all hover:-translate-y-0.5 hover:shadow-lg">
+                            Search Jobs
+                        </button>
                     </div>
-                    <div class="search-input-group">
-                        <i class="fas fa-location-dot"></i>
-                        <input type="text" class="search-input" placeholder="City or remote">
-                    </div>
-                    <button class="search-button">Search Jobs</button>
                 </div>
-                <div class="popular-searches">
-                    Popular: <a href="#">Software Engineer</a> • <a href="#">Product Manager</a> • <a href="#">Data Scientist</a> • <a href="#">Remote Jobs</a>
+
+                <div class="text-sm opacity-90">
+                    Popular: 
+                    <a href="#" class="mx-1 hover:underline">Software Engineer</a> • 
+                    <a href="#" class="mx-1 hover:underline">Product Manager</a> • 
+                    <a href="#" class="mx-1 hover:underline">Data Scientist</a> • 
+                    <a href="#" class="mx-1 hover:underline">Remote Jobs</a>
                 </div>
             </div>
         </section>
 
         <!-- 平台统计 -->
-        <section class="stats-section">
-            <div class="stats-container">
-                <div class="stat-item">
-                    <div class="stat-number">1M+</div>
-                    <div class="stat-label">Active Jobs</div>
+        <section class="bg-white py-12 -mt-12 relative z-10">
+            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-6 bg-white rounded-lg shadow-sm text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">1M+</div>
+                    <div class="text-gray-600">Active Jobs</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">500K+</div>
-                    <div class="stat-label">Companies</div>
+                <div class="p-6 bg-white rounded-lg shadow-sm text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">500K+</div>
+                    <div class="text-gray-600">Companies</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">2M+</div>
-                    <div class="stat-label">Job Seekers</div>
+                <div class="p-6 bg-white rounded-lg shadow-sm text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">2M+</div>
+                    <div class="text-gray-600">Job Seekers</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">98%</div>
-                    <div class="stat-label">Success Rate</div>
+                <div class="p-6 bg-white rounded-lg shadow-sm text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">98%</div>
+                    <div class="text-gray-600">Success Rate</div>
                 </div>
             </div>
         </section>
 
         <!-- 职位类别 -->
-        <section class="categories-section">
-            <div class="section-header">
-                <h2>Explore Job Categories</h2>
-                <p>Find opportunities in your field of expertise</p>
-            </div>
-            <div class="categories-grid">
-                <div class="category-card">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Technology</h3>
-                    <p>15,234 jobs</p>
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Explore Job Categories</h2>
+                    <p class="text-lg text-gray-600">Find opportunities in your field of expertise</p>
                 </div>
-                <div class="category-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Business</h3>
-                    <p>12,456 jobs</p>
-                </div>
-                <div class="category-card">
-                    <i class="fas fa-palette"></i>
-                    <h3>Design</h3>
-                    <p>8,765 jobs</p>
-                </div>
-                <div class="category-card">
-                    <i class="fas fa-bullhorn"></i>
-                    <h3>Marketing</h3>
-                    <p>9,876 jobs</p>
-                </div>
-                <div class="category-card">
-                    <i class="fas fa-flask"></i>
-                    <h3>Science</h3>
-                    <p>6,543 jobs</p>
-                </div>
-                <div class="category-card">
-                    <i class="fas fa-user-tie"></i>
-                    <h3>Management</h3>
-                    <p>7,890 jobs</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg text-center transition-all hover:-translate-y-1 hover:shadow-lg">
+                        <i class="fas fa-laptop-code text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Technology</h3>
+                        <p class="text-gray-600">15,234 jobs</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg text-center transition-all hover:-translate-y-1 hover:shadow-lg">
+                        <i class="fas fa-chart-line text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Business</h3>
+                        <p class="text-gray-600">12,456 jobs</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg text-center transition-all hover:-translate-y-1 hover:shadow-lg">
+                        <i class="fas fa-palette text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Design</h3>
+                        <p class="text-gray-600">8,765 jobs</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg text-center transition-all hover:-translate-y-1 hover:shadow-lg">
+                        <i class="fas fa-bullhorn text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Marketing</h3>
+                        <p class="text-gray-600">9,876 jobs</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg text-center transition-all hover:-translate-y-1 hover:shadow-lg">
+                        <i class="fas fa-flask text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Science</h3>
+                        <p class="text-gray-600">6,543 jobs</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg text-center transition-all hover:-translate-y-1 hover:shadow-lg">
+                        <i class="fas fa-user-tie text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Management</h3>
+                        <p class="text-gray-600">7,890 jobs</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- 特色职位 -->
-        <section class="featured-jobs-section">
-            <div class="section-header">
-                <h2>Featured Jobs</h2>
-                <p>Handpicked opportunities from top companies</p>
-            </div>
-            <div class="jobs-grid">
-                <div class="job-card">
-                    <div class="job-card-header">
-                        <img src="https://logo.clearbit.com/google.com" alt="Google" class="company-logo">
-                        <div class="job-card-company">
-                            <h4>Senior Software Engineer</h4>
-                            <p>Google</p>
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Featured Jobs</h2>
+                    <p class="text-lg text-gray-600">Handpicked opportunities from top companies</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="border border-gray-200 rounded-lg p-6 hover:-translate-y-1 hover:shadow-lg transition-all">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://logo.clearbit.com/google.com" alt="Google" class="w-12 h-12 rounded-lg object-contain">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900">Senior Software Engineer</h4>
+                                <p class="text-gray-600">Google</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Full-time</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Remote</span>
+                        </div>
+                        <div class="flex justify-between text-sm text-gray-600">
+                            <span><i class="fas fa-location-dot mr-2"></i>San Francisco, CA</span>
+                            <span><i class="fas fa-money-bill mr-2"></i>$150K - $200K</span>
                         </div>
                     </div>
-                    <div class="job-card-body">
-                        <div class="job-tag">Full-time</div>
-                        <div class="job-tag">Remote</div>
-                        <p class="job-location"><i class="fas fa-location-dot"></i> San Francisco, CA</p>
-                        <p class="job-salary"><i class="fas fa-money-bill"></i> $150K - $200K</p>
-                    </div>
-                </div>
-                <div class="job-card">
-                    <div class="job-card-header">
-                        <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" class="company-logo">
-                        <div class="job-card-company">
-                            <h4>Product Manager</h4>
-                            <p>Microsoft</p>
+
+                    <div class="border border-gray-200 rounded-lg p-6 hover:-translate-y-1 hover:shadow-lg transition-all">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" class="w-12 h-12 rounded-lg object-contain">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900">Product Manager</h4>
+                                <p class="text-gray-600">Microsoft</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Full-time</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Hybrid</span>
+                        </div>
+                        <div class="flex justify-between text-sm text-gray-600">
+                            <span><i class="fas fa-location-dot mr-2"></i>Seattle, WA</span>
+                            <span><i class="fas fa-money-bill mr-2"></i>$130K - $180K</span>
                         </div>
                     </div>
-                    <div class="job-card-body">
-                        <div class="job-tag">Full-time</div>
-                        <div class="job-tag">Hybrid</div>
-                        <p class="job-location"><i class="fas fa-location-dot"></i> Seattle, WA</p>
-                        <p class="job-salary"><i class="fas fa-money-bill"></i> $130K - $180K</p>
-                    </div>
-                </div>
-                <div class="job-card">
-                    <div class="job-card-header">
-                        <img src="https://logo.clearbit.com/apple.com" alt="Apple" class="company-logo">
-                        <div class="job-card-company">
-                            <h4>UI/UX Designer</h4>
-                            <p>Apple</p>
+
+                    <div class="border border-gray-200 rounded-lg p-6 hover:-translate-y-1 hover:shadow-lg transition-all">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://logo.clearbit.com/apple.com" alt="Apple" class="w-12 h-12 rounded-lg object-contain">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900">UI/UX Designer</h4>
+                                <p class="text-gray-600">Apple</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Full-time</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">On-site</span>
+                        </div>
+                        <div class="flex justify-between text-sm text-gray-600">
+                            <span><i class="fas fa-location-dot mr-2"></i>Cupertino, CA</span>
+                            <span><i class="fas fa-money-bill mr-2"></i>$120K - $160K</span>
                         </div>
                     </div>
-                    <div class="job-card-body">
-                        <div class="job-tag">Full-time</div>
-                        <div class="job-tag">On-site</div>
-                        <p class="job-location"><i class="fas fa-location-dot"></i> Cupertino, CA</p>
-                        <p class="job-salary"><i class="fas fa-money-bill"></i> $120K - $160K</p>
-                    </div>
                 </div>
-            </div>
-            <div class="section-footer">
-                <a href="/jobs" class="btn btn-outline">View All Jobs</a>
+
+                <div class="text-center mt-12">
+                    <a href="/jobs" class="inline-block px-8 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
+                        View All Jobs
+                    </a>
+                </div>
             </div>
         </section>
 
         <!-- 平台优势 -->
-        <section class="features-section">
-            <div class="section-header">
-                <h2>Why Choose Glint</h2>
-                <p>Empowering careers, connecting talents</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>Smart Matching</h3>
-                    <p>AI-powered job matching technology that connects you with the most relevant opportunities.</p>
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Glint</h2>
+                    <p class="text-lg text-gray-600">Empowering careers, connecting talents</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-bolt text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Smart Matching</h3>
+                        <p class="text-gray-600 leading-relaxed">AI-powered job matching technology that connects you with the most relevant opportunities.</p>
                     </div>
-                    <h3>Verified Companies</h3>
-                    <p>All companies are thoroughly vetted to ensure a safe and reliable job search experience.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-bar"></i>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-shield-alt text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Verified Companies</h3>
+                        <p class="text-gray-600 leading-relaxed">All companies are thoroughly vetted to ensure a safe and reliable job search experience.</p>
                     </div>
-                    <h3>Career Insights</h3>
-                    <p>Access detailed salary data and career growth opportunities in your industry.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-comments"></i>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-chart-bar text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Career Insights</h3>
+                        <p class="text-gray-600 leading-relaxed">Access detailed salary data and career growth opportunities in your industry.</p>
                     </div>
-                    <h3>24/7 Support</h3>
-                    <p>Our dedicated support team is always here to help you with your job search journey.</p>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-comments text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">24/7 Support</h3>
+                        <p class="text-gray-600 leading-relaxed">Our dedicated support team is always here to help you with your job search journey.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- 合作企业 -->
-        <section class="companies-section">
-            <div class="section-header">
-                <h2>Trusted by Leading Companies</h2>
-                <p>Join thousands of companies hiring on Glint</p>
-            </div>
-            <div class="companies-grid">
-                <img src="https://logo.clearbit.com/google.com" alt="Google">
-                <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft">
-                <img src="https://logo.clearbit.com/apple.com" alt="Apple">
-                <img src="https://logo.clearbit.com/amazon.com" alt="Amazon">
-                <img src="https://logo.clearbit.com/meta.com" alt="Meta">
-                <img src="https://logo.clearbit.com/netflix.com" alt="Netflix">
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Trusted by Leading Companies</h2>
+                    <p class="text-lg text-gray-600">Join thousands of companies hiring on Glint</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+                    <img src="https://logo.clearbit.com/google.com" alt="Google" class="max-w-[120px] mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" class="max-w-[120px] mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="https://logo.clearbit.com/apple.com" alt="Apple" class="max-w-[120px] mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="https://logo.clearbit.com/amazon.com" alt="Amazon" class="max-w-[120px] mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="https://logo.clearbit.com/meta.com" alt="Meta" class="max-w-[120px] mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="https://logo.clearbit.com/netflix.com" alt="Netflix" class="max-w-[120px] mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                </div>
             </div>
         </section>
 
         <!-- 注册引导 -->
-        <section class="cta-section">
-            <div class="cta-content">
-                <h2>Ready to Take the Next Step?</h2>
-                <p>Join millions of people who've found their dream job through Glint</p>
-                <div class="cta-buttons">
-                    <a href="/register" class="btn btn-primary">Create Account</a>
-                    <a href="/jobs" class="btn btn-outline">Browse Jobs</a>
+        <section class="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white text-center">
+            <div class="max-w-3xl mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-4">Ready to Take the Next Step?</h2>
+                <p class="text-lg mb-8 opacity-90">Join millions of people who've found their dream job through Glint</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/register" class="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+                        Create Account
+                    </a>
+                    <a href="/jobs" class="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+                        Browse Jobs
+                    </a>
                 </div>
             </div>
         </section>

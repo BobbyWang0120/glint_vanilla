@@ -1,16 +1,16 @@
 <!-- 导航栏 -->
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="/" class="logo">Glint</a>
-        <ul class="nav-links">
-            <li><a href="/pages/jobs.html" id="nav-jobs">Find Jobs</a></li>
-            <li><a href="/talent">Find Talent</a></li>
-            <li><a href="/companies">Companies</a></li>
-            <li><a href="/resources">Resources</a></li>
+<nav class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between">
+        <a href="/" class="text-2xl font-bold text-blue-600 tracking-tight">Glint</a>
+        <ul class="hidden md:flex space-x-8">
+            <li><a href="/pages/jobs.html" id="nav-jobs" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Find Jobs</a></li>
+            <li><a href="/talent" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Find Talent</a></li>
+            <li><a href="/companies" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Companies</a></li>
+            <li><a href="/resources" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Resources</a></li>
         </ul>
-        <div class="auth-buttons">
-            <button class="btn btn-login">Login</button>
-            <button class="btn btn-register">Register</button>
+        <div class="flex space-x-4">
+            <button class="px-6 py-2 text-blue-600 font-medium border-2 border-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-colors">Login</button>
+            <button class="px-6 py-2 text-white font-medium bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">Register</button>
         </div>
     </div>
 </nav>

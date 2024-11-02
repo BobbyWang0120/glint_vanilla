@@ -4,111 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jobs - Glint</title>
-    <link rel="stylesheet" href="/styles/common.css">
-    <link rel="stylesheet" href="/styles/jobs.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                    },
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="pt-[72px] bg-gray-50">
     <!-- 页头 -->
     <header></header>
 
     <!-- 主要内容区 -->
-    <main class="main-content">
+    <main>
         <!-- 搜索区域 -->
-        <section class="search-section">
-            <div class="search-box">
-                <div class="search-input-group">
-                    <i class="fas fa-search"></i>
-                    <input type="text" class="search-input" placeholder="Job title, skills, or company" value="Software Engineer">
+        <section class="bg-white py-8 border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="bg-white p-3 rounded-full shadow-lg">
+                    <div class="flex flex-col md:flex-row gap-2">
+                        <div class="flex-1 flex items-center px-6 md:border-r-2 border-gray-200">
+                            <i class="fas fa-search text-gray-500 text-xl min-w-[24px]"></i>
+                            <input type="text" class="flex-1 ml-4 text-lg text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="Job title, skills, or company" value="Software Engineer">
+                        </div>
+                        <div class="flex-1 flex items-center px-6">
+                            <i class="fas fa-location-dot text-gray-500 text-xl min-w-[24px]"></i>
+                            <input type="text" class="flex-1 ml-4 text-lg text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="City or remote" value="San Francisco">
+                        </div>
+                        <button class="w-full md:w-auto px-10 py-4 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-all hover:-translate-y-0.5 hover:shadow-lg">
+                            Search
+                        </button>
+                    </div>
                 </div>
-                <div class="search-input-group">
-                    <i class="fas fa-location-dot"></i>
-                    <input type="text" class="search-input" placeholder="City or remote" value="San Francisco">
-                </div>
-                <button class="search-button">Search</button>
             </div>
         </section>
 
         <!-- 筛选和结果区域 -->
-        <div class="jobs-container">
+        <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8">
             <!-- 筛选侧边栏 -->
-            <aside class="filters-sidebar">
-                <div class="filter-group">
-                    <h3>Experience Level</h3>
-                    <label class="filter-option">
-                        <input type="checkbox" checked> Entry Level
-                        <span class="count">(234)</span>
-                    </label>
-                    <label class="filter-option">
-                        <input type="checkbox" checked> Mid Level
-                        <span class="count">(567)</span>
-                    </label>
-                    <label class="filter-option">
-                        <input type="checkbox"> Senior Level
-                        <span class="count">(789)</span>
-                    </label>
-                </div>
+            <aside class="bg-white rounded-lg p-6 border border-gray-200 h-fit">
+                <div class="space-y-6 divide-y divide-gray-200">
+                    <div class="pb-6">
+                        <h3 class="text-base font-semibold text-gray-900 mb-4">Experience Level</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center">
+                                    <input type="checkbox" checked class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="ml-2 text-gray-700">Entry Level</span>
+                                </div>
+                                <span class="text-sm text-gray-500">(234)</span>
+                            </label>
+                            <label class="flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center">
+                                    <input type="checkbox" checked class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="ml-2 text-gray-700">Mid Level</span>
+                                </div>
+                                <span class="text-sm text-gray-500">(567)</span>
+                            </label>
+                            <label class="flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="ml-2 text-gray-700">Senior Level</span>
+                                </div>
+                                <span class="text-sm text-gray-500">(789)</span>
+                            </label>
+                        </div>
+                    </div>
 
-                <div class="filter-group">
-                    <h3>Job Type</h3>
-                    <label class="filter-option">
-                        <input type="checkbox" checked> Full-time
-                        <span class="count">(1,234)</span>
-                    </label>
-                    <label class="filter-option">
-                        <input type="checkbox"> Part-time
-                        <span class="count">(567)</span>
-                    </label>
-                    <label class="filter-option">
-                        <input type="checkbox"> Contract
-                        <span class="count">(345)</span>
-                    </label>
-                </div>
+                    <div class="pt-6">
+                        <h3 class="text-base font-semibold text-gray-900 mb-4">Job Type</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center">
+                                    <input type="checkbox" checked class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="ml-2 text-gray-700">Full-time</span>
+                                </div>
+                                <span class="text-sm text-gray-500">(1,234)</span>
+                            </label>
+                            <label class="flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="ml-2 text-gray-700">Part-time</span>
+                                </div>
+                                <span class="text-sm text-gray-500">(567)</span>
+                            </label>
+                            <label class="flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="ml-2 text-gray-700">Contract</span>
+                                </div>
+                                <span class="text-sm text-gray-500">(345)</span>
+                            </label>
+                        </div>
+                    </div>
 
-                <div class="filter-group">
-                    <h3>Location Type</h3>
-                    <label class="filter-option">
-                        <input type="checkbox" checked> Remote
-                        <span class="count">(789)</span>
-                    </label>
-                    <label class="filter-option">
-                        <input type="checkbox"> On-site
-                        <span class="count">(456)</span>
-                    </label>
-                    <label class="filter-option">
-                        <input type="checkbox"> Hybrid
-                        <span class="count">(234)</span>
-                    </label>
-                </div>
+                    <div class="pt-6">
+                        <h3 class="text-base font-semibold text-gray-900 mb-4">Location Type</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center">
+                                    <input type="checkbox" checked class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="ml-2 text-gray-700">Remote</span>
+                                </div>
+                                <span class="text-sm text-gray-500">(789)</span>
+                            </label>
+                            <label class="flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="ml-2 text-gray-700">On-site</span>
+                                </div>
+                                <span class="text-sm text-gray-500">(456)</span>
+                            </label>
+                            <label class="flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="ml-2 text-gray-700">Hybrid</span>
+                                </div>
+                                <span class="text-sm text-gray-500">(234)</span>
+                            </label>
+                        </div>
+                    </div>
 
-                <div class="filter-group">
-                    <h3>Salary Range</h3>
-                    <label class="filter-option">
-                        <input type="checkbox"> $0 - $50k
-                        <span class="count">(123)</span>
-                    </label>
-                    <label class="filter-option">
-                        <input type="checkbox" checked> $50k - $100k
-                        <span class="count">(456)</span>
-                    </label>
-                    <label class="filter-option">
-                        <input type="checkbox" checked> $100k - $150k
-                        <span class="count">(789)</span>
-                    </label>
-                    <label class="filter-option">
-                        <input type="checkbox"> $150k+
-                        <span class="count">(234)</span>
-                    </label>
+                    <div class="pt-6">
+                        <h3 class="text-base font-semibold text-gray-900 mb-4">Salary Range</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="ml-2 text-gray-700">$0 - $50k</span>
+                                </div>
+                                <span class="text-sm text-gray-500">(123)</span>
+                            </label>
+                            <label class="flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center">
+                                    <input type="checkbox" checked class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="ml-2 text-gray-700">$50k - $100k</span>
+                                </div>
+                                <span class="text-sm text-gray-500">(456)</span>
+                            </label>
+                            <label class="flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center">
+                                    <input type="checkbox" checked class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="ml-2 text-gray-700">$100k - $150k</span>
+                                </div>
+                                <span class="text-sm text-gray-500">(789)</span>
+                            </label>
+                            <label class="flex items-center justify-between cursor-pointer">
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="ml-2 text-gray-700">$150k+</span>
+                                </div>
+                                <span class="text-sm text-gray-500">(234)</span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </aside>
 
             <!-- 职位列表 -->
-            <div class="jobs-list">
-                <div class="jobs-header">
-                    <h2>2,345 Software Engineer jobs in San Francisco</h2>
-                    <div class="jobs-sort">
-                        <span>Sort by:</span>
-                        <select>
+            <div class="space-y-6">
+                <div class="flex justify-between items-center">
+                    <h2 class="text-xl font-semibold text-gray-900">2,345 Software Engineer jobs in San Francisco</h2>
+                    <div class="flex items-center gap-2">
+                        <span class="text-gray-600">Sort by:</span>
+                        <select class="rounded-md border-gray-300 text-gray-700 text-sm focus:ring-blue-500 focus:border-blue-500">
                             <option>Most Relevant</option>
                             <option>Newest</option>
                             <option>Highest Salary</option>
@@ -117,87 +183,87 @@
                 </div>
 
                 <!-- 职位卡片 -->
-                <a href="/pages/job-detail.html" class="job-card">
-                    <div class="job-card-header">
-                        <img src="https://logo.clearbit.com/google.com" alt="Google" class="company-logo">
-                        <div class="job-card-company">
-                            <h3>Senior Software Engineer</h3>
-                            <p>Google</p>
+                <a href="/pages/job-detail.html" class="block bg-white border border-gray-200 rounded-lg p-6 hover:-translate-y-1 hover:shadow-lg transition-all">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://logo.clearbit.com/google.com" alt="Google" class="w-12 h-12 rounded-lg object-contain">
+                        <div class="flex-1">
+                            <h3 class="text-lg font-semibold text-gray-900">Senior Software Engineer</h3>
+                            <p class="text-gray-600">Google</p>
                         </div>
-                        <div class="job-card-salary">$150K - $200K</div>
+                        <div class="text-green-600 font-semibold">$150K - $200K</div>
                     </div>
-                    <div class="job-card-tags">
-                        <span class="tag">Full-time</span>
-                        <span class="tag">Remote</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">React</span>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Full-time</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Remote</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">React</span>
                     </div>
-                    <p class="job-card-description">
+                    <p class="text-gray-600 mb-4 line-clamp-2">
                         Join our team to build next-generation cloud infrastructure and help scale Google's most critical services.
                     </p>
-                    <div class="job-card-footer">
-                        <span><i class="fas fa-location-dot"></i> San Francisco, CA</span>
-                        <span><i class="fas fa-clock"></i> Posted 2 days ago</span>
+                    <div class="flex justify-between text-sm text-gray-500">
+                        <span><i class="fas fa-location-dot mr-2"></i>San Francisco, CA</span>
+                        <span><i class="fas fa-clock mr-2"></i>Posted 2 days ago</span>
                     </div>
                 </a>
 
-                <a href="/pages/job-detail.html" class="job-card">
-                    <div class="job-card-header">
-                        <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" class="company-logo">
-                        <div class="job-card-company">
-                            <h3>Full Stack Engineer</h3>
-                            <p>Microsoft</p>
+                <a href="/pages/job-detail.html" class="block bg-white border border-gray-200 rounded-lg p-6 hover:-translate-y-1 hover:shadow-lg transition-all">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" class="w-12 h-12 rounded-lg object-contain">
+                        <div class="flex-1">
+                            <h3 class="text-lg font-semibold text-gray-900">Full Stack Engineer</h3>
+                            <p class="text-gray-600">Microsoft</p>
                         </div>
-                        <div class="job-card-salary">$130K - $180K</div>
+                        <div class="text-green-600 font-semibold">$130K - $180K</div>
                     </div>
-                    <div class="job-card-tags">
-                        <span class="tag">Full-time</span>
-                        <span class="tag">Hybrid</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Node.js</span>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Full-time</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Hybrid</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">JavaScript</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Node.js</span>
                     </div>
-                    <p class="job-card-description">
+                    <p class="text-gray-600 mb-4 line-clamp-2">
                         Work on cutting-edge web applications and help shape the future of Microsoft's cloud services.
                     </p>
-                    <div class="job-card-footer">
-                        <span><i class="fas fa-location-dot"></i> San Francisco, CA</span>
-                        <span><i class="fas fa-clock"></i> Posted 3 days ago</span>
+                    <div class="flex justify-between text-sm text-gray-500">
+                        <span><i class="fas fa-location-dot mr-2"></i>San Francisco, CA</span>
+                        <span><i class="fas fa-clock mr-2"></i>Posted 3 days ago</span>
                     </div>
                 </a>
 
-                <a href="/pages/job-detail.html" class="job-card">
-                    <div class="job-card-header">
-                        <img src="https://logo.clearbit.com/apple.com" alt="Apple" class="company-logo">
-                        <div class="job-card-company">
-                            <h3>iOS Engineer</h3>
-                            <p>Apple</p>
+                <a href="/pages/job-detail.html" class="block bg-white border border-gray-200 rounded-lg p-6 hover:-translate-y-1 hover:shadow-lg transition-all">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://logo.clearbit.com/apple.com" alt="Apple" class="w-12 h-12 rounded-lg object-contain">
+                        <div class="flex-1">
+                            <h3 class="text-lg font-semibold text-gray-900">iOS Engineer</h3>
+                            <p class="text-gray-600">Apple</p>
                         </div>
-                        <div class="job-card-salary">$140K - $190K</div>
+                        <div class="text-green-600 font-semibold">$140K - $190K</div>
                     </div>
-                    <div class="job-card-tags">
-                        <span class="tag">Full-time</span>
-                        <span class="tag">On-site</span>
-                        <span class="tag">Swift</span>
-                        <span class="tag">iOS</span>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Full-time</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">On-site</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Swift</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">iOS</span>
                     </div>
-                    <p class="job-card-description">
+                    <p class="text-gray-600 mb-4 line-clamp-2">
                         Create amazing experiences for millions of iOS users worldwide. Join our talented team of developers.
                     </p>
-                    <div class="job-card-footer">
-                        <span><i class="fas fa-location-dot"></i> Cupertino, CA</span>
-                        <span><i class="fas fa-clock"></i> Posted 1 week ago</span>
+                    <div class="flex justify-between text-sm text-gray-500">
+                        <span><i class="fas fa-location-dot mr-2"></i>Cupertino, CA</span>
+                        <span><i class="fas fa-clock mr-2"></i>Posted 1 week ago</span>
                     </div>
                 </a>
 
                 <!-- 分页 -->
-                <div class="pagination">
-                    <button class="page-btn active">1</button>
-                    <button class="page-btn">2</button>
-                    <button class="page-btn">3</button>
-                    <button class="page-btn">4</button>
-                    <button class="page-btn">5</button>
-                    <span>...</span>
-                    <button class="page-btn">23</button>
+                <div class="flex justify-center gap-2">
+                    <button class="w-10 h-10 flex items-center justify-center rounded-md bg-blue-600 text-white">1</button>
+                    <button class="w-10 h-10 flex items-center justify-center rounded-md border border-gray-300 hover:border-blue-600 hover:text-blue-600">2</button>
+                    <button class="w-10 h-10 flex items-center justify-center rounded-md border border-gray-300 hover:border-blue-600 hover:text-blue-600">3</button>
+                    <button class="w-10 h-10 flex items-center justify-center rounded-md border border-gray-300 hover:border-blue-600 hover:text-blue-600">4</button>
+                    <button class="w-10 h-10 flex items-center justify-center rounded-md border border-gray-300 hover:border-blue-600 hover:text-blue-600">5</button>
+                    <span class="w-10 h-10 flex items-center justify-center">...</span>
+                    <button class="w-10 h-10 flex items-center justify-center rounded-md border border-gray-300 hover:border-blue-600 hover:text-blue-600">23</button>
                 </div>
             </div>
         </div>
