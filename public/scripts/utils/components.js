@@ -10,17 +10,26 @@
 export async function loadComponent(componentPath, targetSelector) {
     try {
         const response = await fetch(componentPath);
+        if (!response.ok) {
+            throw new Error(`Failed to load component: ${response.statusText}`);
+        }
         const html = await response.text();
-        document.querySelector(targetSelector).innerHTML = html;
+        const target = document.querySelector(targetSelector);
+        if (!target) {
+            throw new Error(`Target element not found: ${targetSelector}`);
+        }
+        target.innerHTML = html;
 
         // 设置当前页面的导航激活状态
-        const currentPath = window.location.pathname;
-        const navLinks = document.querySelectorAll('.nav-links a');
-        navLinks.forEach(link => {
-            if (link.getAttribute('href') === currentPath) {
-                link.classList.add('active');
-            }
-        });
+        if (targetSelector === 'header') {
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        }
     } catch (error) {
         console.error('加载组件失败:', error);
     }
